@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import type { Locale } from "@/lib/site-config";
+import { normalizeAdsenseClientId } from "@/lib/monetization-env";
 
 interface AdBannerProps {
   locale: Locale;
@@ -20,7 +21,9 @@ export default function AdBanner({
   slot = "9283746501",
   position = "above-fold",
 }: AdBannerProps) {
-  const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_ID;
+  const adsenseClientId = normalizeAdsenseClientId(
+    process.env.NEXT_PUBLIC_ADSENSE_ID
+  );
 
   useEffect(() => {
     if (adsenseClientId && typeof window !== "undefined") {

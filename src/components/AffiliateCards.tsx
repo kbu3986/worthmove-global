@@ -1,17 +1,60 @@
-import { Headphones, Armchair, BookOpen, ShieldCheck, ExternalLink } from "lucide-react";
+import {
+  Headphones,
+  Armchair,
+  BookOpen,
+  ShieldCheck,
+  ExternalLink,
+} from "lucide-react";
 import type { Locale } from "@/lib/site-config";
+import { extractIframeSrc, sanitizeHttpUrl } from "@/lib/monetization-env";
 
 interface AffiliateCardsProps {
   locale: Locale;
   commuteMinutes?: number;
 }
 
+function buildCoupangUrl({
+  query,
+  partnersId,
+  subId,
+  redirectUrl,
+}: {
+  query: string;
+  partnersId: string;
+  subId: string;
+  redirectUrl: string;
+}): string {
+  if (redirectUrl) {
+    return redirectUrl;
+  }
+  const params = new URLSearchParams({
+    q: query,
+    channel: "user",
+    subId,
+  });
+  if (partnersId) {
+    params.set("lptag", partnersId);
+  }
+  return `https://www.coupang.com/np/search?${params.toString()}`;
+}
+
 export default function AffiliateCards({
   locale,
   commuteMinutes = 50,
 }: AffiliateCardsProps) {
-  const amazonTag = process.env.NEXT_PUBLIC_AMAZON_TAG || "worthmove-20";
-  const coupangSubId = process.env.NEXT_PUBLIC_COUPANG_SUBID || "worthmove";
+  const amazonTag =
+    (process.env.NEXT_PUBLIC_AMAZON_TAG || "").trim() || "worthmove-20";
+  const coupangPartnersId = (
+    process.env.NEXT_PUBLIC_COUPANG_PARTNERS_ID || ""
+  ).trim();
+  const coupangSubId =
+    (process.env.NEXT_PUBLIC_COUPANG_SUBID || "").trim() || "worthmove";
+  const coupangRedirectUrl = sanitizeHttpUrl(
+    process.env.NEXT_PUBLIC_COUPANG_REDIRECT_URL
+  );
+  const coupangIframeUrl = extractIframeSrc(
+    process.env.NEXT_PUBLIC_COUPANG_IFRAME_URL
+  );
 
   const items =
     locale === "ko"
@@ -61,7 +104,7 @@ export default function AffiliateCards({
             icon: Armchair,
           },
           {
-            title: "Glare-Free Waterproof E-Reader (6.8\" Paperwhite)",
+            title: 'Glare-Free Waterproof E-Reader (6.8" Paperwhite)',
             desc: "Read 25+ career & finance books a year during train rides with zero eye strain.",
             badge: "Transit Upskilling",
             query: "Kindle Paperwhite Kobo Clara glare free e-reader",
@@ -77,7 +120,10 @@ export default function AffiliateCards({
         ];
 
   return (
-    <section className="my-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-xs sm:p-8">
+    <section
+      className="my-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-xs sm:p-8"
+      data-partners-id={locale === "ko" && coupangPartnersId ? coupangPartnersId : undefined}
+    >
       <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <span className="inline-block rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-900">
@@ -91,16 +137,46 @@ export default function AffiliateCards({
               : "Can't Escape the Commute? Reclaim Your Sanity & Posture"}
           </h2>
         </div>
+
+        {locale === "ko" && coupangRedirectUrl ? (
+          <a
+            href={coupangRedirectUrl}
+            target="_blank"
+            rel="sponsored nofollow noopener"
+            className="mt-2 inline-flex items-center gap-1.5 rounded-xl bg-slate-900 px-3.5 py-2 text-xs font-extrabold text-emerald-400 hover:bg-slate-800 sm:mt-0"
+          >
+            <span>직장인 통근 특가 모음 바로가기</span>
+            <ExternalLink className="h-3.5 w-3.5" />
+          </a>
+        ) : null}
       </div>
+
+      {locale === "ko" && coupangIframeUrl ? (
+        <div className="mt-5 overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-2 flex justify-center">
+          <iframe
+            src={coupangIframeUrl}
+            title="Coupang Partners Dynamic Banner"
+            width="680"
+            height="140"
+            frameBorder="0"
+            scrolling="no"
+            referrerPolicy="unsafe-url"
+            className="max-w-full rounded-xl"
+          />
+        </div>
+      ) : null}
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {items.map((item) => {
           const Icon = item.icon;
           const href =
             locale === "ko"
-              ? `https://www.coupang.com/np/search?q=${encodeURIComponent(
-                  item.query
-                )}&channel=user&subId=${encodeURIComponent(coupangSubId)}`
+              ? buildCoupangUrl({
+                  query: item.query,
+                  partnersId: coupangPartnersId,
+                  subId: coupangSubId,
+                  redirectUrl: coupangRedirectUrl,
+                })
               : `https://www.amazon.com/s?k=${encodeURIComponent(
                   item.query
                 )}&tag=${encodeURIComponent(amazonTag)}`;

@@ -6,7 +6,7 @@ export const LOCALES: Locale[] = ["en", "ko"];
 
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "https://worthmove-global.vercel.app";
+  "https://kbu3986.github.io/worthmove-global";
 
 export const SITE_NAME: Record<Locale, string> = {
   en: "WorthMove",

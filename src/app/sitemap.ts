@@ -14,7 +14,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   const pushBilingual = (subpath: string, priority: number) => {
-    const clean = subpath ? (subpath.startsWith("/") ? subpath : `/${subpath}`) : "";
+    const clean = subpath
+      ? subpath.startsWith("/")
+        ? subpath
+        : `/${subpath}`
+      : "";
     for (const locale of LOCALES) {
       entries.push({
         url: `${SITE_URL}/${locale}${clean}`,
@@ -25,14 +29,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
           languages: {
             en: `${SITE_URL}/en${clean}`,
             ko: `${SITE_URL}/ko${clean}`,
+            "x-default": `${SITE_URL}/en${clean}`,
           },
         },
       });
     }
   };
 
-  // 1. Home pages (/en, /ko)
+  // 1. Home & Trust/Compliance pages (/en, /ko, /about, /privacy)
   pushBilingual("", 1.0);
+  pushBilingual("/about", 0.7);
+  pushBilingual("/privacy", 0.6);
 
   // 2. Salary brackets (USD + KRW Manwon)
   for (const amount of ALL_SALARY_SLUGS) {

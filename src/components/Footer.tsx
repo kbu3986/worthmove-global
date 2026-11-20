@@ -19,6 +19,15 @@ export default function Footer({ locale }: FooterProps) {
                 ? "2026년 4대보험(국민연금 4.75%·건강보험 3.545%·장기요양·고용보험) 및 근로소득세·통근 비용·야근 시간을 반영한 실질 시급 & 이직 손익 분석기."
                 : "2026 after-tax take-home pay, commute time drain, unpaid overtime, and RTO vs. Remote true hourly wage calculator."}
             </p>
+            <div className="mt-4 flex flex-wrap gap-3 text-xs font-bold text-emerald-400">
+              <Link href={`/${locale}/about`} className="hover:underline">
+                {locale === "ko" ? "서비스 소개 · 산출 기준" : "About & Methodology"}
+              </Link>
+              <span className="text-slate-700">·</span>
+              <Link href={`/${locale}/privacy`} className="hover:underline">
+                {locale === "ko" ? "개인정보처리방침" : "Privacy Policy"}
+              </Link>
+            </div>
           </div>
 
           <div>
@@ -85,16 +94,22 @@ export default function Footer({ locale }: FooterProps) {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-slate-800 pt-6 text-[11px] text-slate-500 flex flex-col sm:flex-row justify-between gap-2">
+        <div className="mt-10 border-t border-slate-800 pt-6 text-[11px] text-slate-500 flex flex-col sm:flex-row justify-between gap-3">
           <p>
             © {new Date().getFullYear()} WorthMove.{" "}
             {locale === "ko"
               ? "본 계산 결과는 표준 세율 기준 참고용 시뮬레이션이며 법적·세무적 자문을 대체하지 않습니다."
               : "For informational & career planning purposes only; not formal tax or legal advice."}
           </p>
-          <div className="flex gap-4">
-            <Link href="/en" className="hover:text-slate-300">English (Global)</Link>
-            <Link href="/ko" className="hover:text-slate-300">한국어 (대한민국)</Link>
+          <div className="flex flex-wrap gap-4 font-semibold">
+            <Link href={`/${locale}/about`} className="hover:text-slate-200">
+              {locale === "ko" ? "소개·문의" : "About & Contact"}
+            </Link>
+            <Link href={`/${locale}/privacy`} className="hover:text-slate-200">
+              {locale === "ko" ? "개인정보처리방침" : "Privacy Policy"}
+            </Link>
+            <Link href="/en" className="hover:text-slate-200">English</Link>
+            <Link href="/ko" className="hover:text-slate-200">한국어</Link>
           </div>
         </div>
       </div>

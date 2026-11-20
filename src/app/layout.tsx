@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { SITE_URL } from "@/lib/site-config";
+import {
+  extractMetaContent,
+  normalizeAdsenseClientId,
+} from "@/lib/monetization-env";
+
+const adsenseId = normalizeAdsenseClientId(process.env.NEXT_PUBLIC_ADSENSE_ID);
+const gscVerification = extractMetaContent(
+  process.env.NEXT_PUBLIC_GSC_VERIFICATION
+);
+const naverVerification = extractMetaContent(
+  process.env.NEXT_PUBLIC_NAVER_VERIFICATION
+);
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -19,6 +31,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
+      <head>
+        {adsenseId ? (
+          <>
+            <meta name="google-adsense-account" content={adsenseId} />
+            <script
+              async
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
+              crossOrigin="anonymous"
+            />
+          </>
+        ) : null}
+        {gscVerification ? (
+          <meta name="google-site-verification" content={gscVerification} />
+        ) : null}
+        {naverVerification ? (
+          <meta name="naver-site-verification" content={naverVerification} />
+        ) : null}
+      </head>
       <body className="min-h-full flex flex-col bg-slate-50 text-slate-900">
         {children}
       </body>
