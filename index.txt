@@ -1,0 +1,21 @@
+1:"$Sreact.fragment"
+2:"/worthmove-global/_next/static/chunks/3qfy96eoyh-ek.js"
+3:I[39756,["$2"],"default"]
+4:I[37457,["$2"],"default"]
+5:"/worthmove-global/_next/static/chunks/3zt_16xndew4w.js"
+6:I[22016,["$2","$5"],""]
+9:I[97367,["$2"],"OutletBoundary"]
+a:"$Sreact.suspense"
+c:"ViewportBoundary"
+d:I[97367,["$2"],"$c"]
+f:"MetadataBoundary"
+10:I[97367,["$2"],"$f"]
+12:I[68027,["$2"],"default",1]
+:HL["/worthmove-global/_next/static/chunks/28pl-q6k-hw2p.css","style"]
+7:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L8",null,["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]]}],"p":false,"v":null}}]]
+0:{"P":null,"c":["",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/worthmove-global/_next/static/chunks/28pl-q6k-hw2p.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/worthmove-global/_next/static/chunks/3qfy96eoyh-ek.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"h-full antialiased","children":[["$","head",null,{"children":[[["$","meta",null,{"name":"google-adsense-account","content":"ca-pub-8587506565277191"}],["$","script",null,{"async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8587506565277191","crossOrigin":"anonymous"}]],["$","meta",null,{"name":"google-site-verification","content":"srNR80vNCy3sBgCrxGn_bZLwTPgwsvqmdTxF4arEhw4"}],["$","meta",null,{"name":"naver-site-verification","content":"8c10763f9e41c812023c31dc42cce3517af9ad25"}]]}],["$","body",null,{"className":"min-h-full flex flex-col bg-slate-50 text-slate-900","children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex min-h-screen flex-col items-center justify-center bg-slate-50 px-4 text-center","children":[["$","p",null,{"className":"rounded-full bg-slate-900 px-3.5 py-1 text-xs font-extrabold text-emerald-400","children":"404 · PAGE NOT FOUND"}],["$","h1",null,{"className":"mt-4 text-3xl font-black text-slate-900","children":"페이지를 찾을 수 없습니다 / Route Not Found"}],["$","p",null,{"className":"mt-2 max-w-md text-sm text-slate-600","children":"요청하신 주소가 변경되었거나 존재하지 않습니다. 아래 계산기 홈으로 이동해 내 진짜 시급을 확인해 보세요."}],["$","div",null,{"className":"mt-6 flex gap-3","children":[["$","$L6",null,{"href":"/en","className":"rounded-xl bg-slate-900 px-5 py-2.5 text-xs font-extrabold text-white hover:bg-slate-800","children":"WorthMove (English)"}],["$","$L6",null,{"href":"/ko","className":"rounded-xl bg-emerald-600 px-5 py-2.5 text-xs font-extrabold text-white hover:bg-emerald-500","children":"이직손익판독기 (한국어)"}]]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],"p":false,"v":null},"c":"$Q7"},"h":{"r":["$","$1","h",{"children":[null,["$","$Ld",null,{"children":"$Le"}],["$","$L10",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$a",null,{"name":"Next.Metadata","children":"$L11"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$12",[["$","link","0",{"rel":"stylesheet","href":"/worthmove-global/_next/static/chunks/28pl-q6k-hw2p.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"IbGAiAmJwv_JNGzl36HzK"}
+8:E{"digest":"NEXT_REDIRECT;replace;/en;307;"}
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+13:I[27201,["$2"],"IconMark"]
+b:null
+11:[["$","title","0",{"children":"WorthMove — True Hourly Wage, RTO vs Remote & Job-Switch Receipt"}],["$","meta","1",{"name":"description","content":"Calculate your real after-tax hourly wage after commuting, unpaid overtime, and transit costs. Generate a shareable job-switch audit receipt."}],["$","link","2",{"rel":"icon","href":"/worthmove-global/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L13","3",{}]]

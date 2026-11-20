@@ -1,0 +1,3 @@
+:HL["/worthmove-global/_next/static/chunks/28pl-q6k-hw2p.css","style"]
+1:[["children",{"s":"__PAGE__","h":160}]]
+0:{"b":"IbGAiAmJwv_JNGzl36HzK","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

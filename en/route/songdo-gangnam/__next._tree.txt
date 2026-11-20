@@ -1,0 +1,6 @@
+:HL["/worthmove-global/_next/static/chunks/28pl-q6k-hw2p.css","style"]
+4:[["children",{"s":"__PAGE__","h":160}]]
+3:[["children",{"s":{"n":"slug","t":"d","k":"songdo-gangnam","s":[]},"h":96,"c":"$Q4"}]]
+2:[["children",{"s":"route","h":96,"c":"$Q3"}]]
+1:[["children",{"s":{"n":"locale","t":"d","k":"en","s":[]},"h":96,"c":"$Q2"}]]
+0:{"b":"IbGAiAmJwv_JNGzl36HzK","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

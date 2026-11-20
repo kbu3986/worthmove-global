@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://kbu3986.github.io/worthmove-global
+Sitemap: https://kbu3986.github.io/worthmove-global/sitemap.xml

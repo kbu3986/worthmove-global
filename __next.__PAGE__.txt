@@ -1,0 +1,26 @@
+1:"$Sreact.fragment"
+2:"/worthmove-global/_next/static/chunks/3qfy96eoyh-ek.js"
+3:I[39756,["$2"],"default"]
+4:I[37457,["$2"],"default"]
+5:"/worthmove-global/_next/static/chunks/3zt_16xndew4w.js"
+6:I[22016,["$2","$5"],""]
+b:I[97367,["$2"],"OutletBoundary"]
+c:"$Sreact.suspense"
+f:"ViewportBoundary"
+10:I[97367,["$2"],"$f"]
+11:"MetadataBoundary"
+12:I[97367,["$2"],"$11"]
+13:I[27201,["$2"],"IconMark"]
+:HL["/worthmove-global/_next/static/chunks/28pl-q6k-hw2p.css","style"]
+8:X
+9:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]]}],"p":"$@e","v":null,"s":"$8"}}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/worthmove-global/_next/static/chunks/28pl-q6k-hw2p.css","precedence":"next"}],["$","script","script-0",{"src":"/worthmove-global/_next/static/chunks/3qfy96eoyh-ek.js","async":true}]],["$","html",null,{"lang":"en","className":"h-full antialiased","children":[["$","head",null,{"children":[[["$","meta",null,{"name":"google-adsense-account","content":"ca-pub-8587506565277191"}],["$","script",null,{"async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8587506565277191","crossOrigin":"anonymous"}]],["$","meta",null,{"name":"google-site-verification","content":"srNR80vNCy3sBgCrxGn_bZLwTPgwsvqmdTxF4arEhw4"}],["$","meta",null,{"name":"naver-site-verification","content":"8c10763f9e41c812023c31dc42cce3517af9ad25"}]]}],["$","body",null,{"className":"min-h-full flex flex-col bg-slate-50 text-slate-900","children":["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[["$","div",null,{"className":"flex min-h-screen flex-col items-center justify-center bg-slate-50 px-4 text-center","children":[["$","p",null,{"className":"rounded-full bg-slate-900 px-3.5 py-1 text-xs font-extrabold text-emerald-400","children":"404 · PAGE NOT FOUND"}],["$","h1",null,{"className":"mt-4 text-3xl font-black text-slate-900","children":"페이지를 찾을 수 없습니다 / Route Not Found"}],["$","p",null,{"className":"mt-2 max-w-md text-sm text-slate-600","children":"요청하신 주소가 변경되었거나 존재하지 않습니다. 아래 계산기 홈으로 이동해 내 진짜 시급을 확인해 보세요."}],["$","div",null,{"className":"mt-6 flex gap-3","children":[["$","$L6",null,{"href":"/en","className":"rounded-xl bg-slate-900 px-5 py-2.5 text-xs font-extrabold text-white hover:bg-slate-800","children":"WorthMove (English)"}],["$","$L6",null,{"href":"/ko","className":"rounded-xl bg-emerald-600 px-5 py-2.5 text-xs font-extrabold text-white hover:bg-emerald-500","children":"이직손익판독기 (한국어)"}]]}]]}],[]]}]}]]}]]}],"p":"$@7","v":null,"s":"$8"},"c":"$Q9"},"h":{"r":["$","$1","h",{"children":[null,["$","$L10",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"WorthMove — True Hourly Wage, RTO vs Remote & Job-Switch Receipt"}],["$","meta","1",{"name":"description","content":"Calculate your real after-tax hourly wage after commuting, unpaid overtime, and transit costs. Generate a shareable job-switch audit receipt."}],["$","link","2",{"rel":"icon","href":"/worthmove-global/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L13","3",{}]]}]}],null]}],null]}],"p":"$@14","v":null,"s":"$8"}},"a":"$@15","u":"$@16","b":"IbGAiAmJwv_JNGzl36HzK"}
+a:E{"digest":"NEXT_REDIRECT;replace;/en;307;"}
+d:null
+8:300
+16:true
+8:C
+15:0
+7:"$undefined"
+14:"$undefined"
+e:"$undefined"
